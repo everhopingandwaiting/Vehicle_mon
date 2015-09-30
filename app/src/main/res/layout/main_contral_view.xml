@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <!--  <include layout="@layout/include_me_title"/>-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@drawable/bool2" >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="toggleMenu"
+            android:text="滑出" />
+
+
+
+        <TextView
+            android:id="@+id/un"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ib"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dip"
+            android:gravity="center_horizontal"
+            android:text="布尔科技"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+        <!-- 签到 -->
+
+        <TextView
+            android:id="@+id/qiandao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:layout_toLeftOf="@+id/set"
+            android:text="签到  |"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
+
+
+
+        <ImageButton
+            android:id="@+id/set"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/shezhi"
+            android:paddingRight="20dp" />
+
+
+
+        <ImageButton
+            android:id="@+id/ib"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/qiandao"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/rpitou" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:orientation="vertical"
+        android:background="#2e3436">
+
+        <!-- 导航条部分引用界面 activity_persona_account -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="26dp"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/rl_me_infor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:padding="10dp" >
+
+                <!-- 左边的图标 -->
+
+                <ImageView
+                    android:id="@+id/iv_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/vehicle_info" />
+
+                <!-- 右边的图标 -->
+
+                <ImageView
+                    android:id="@+id/iv_arrow"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/plus" />
+                <!-- 垂直据居中 -->
+
+
+                <!-- 中间显示文本部分 -->
+
+                <TextView
+                    android:id="@+id/zhuce_personal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toLeftOf="@id/iv_arrow"
+                    android:layout_toRightOf="@id/iv_icon"
+                    android:gravity="center_vertical"
+                    android:text="**********"
+                    android:textSize="16sp"
+                    />
+            </RelativeLayout>
+
+            <!-- top -->
+
+            <RelativeLayout
+                android:id="@+id/rl_me_wallet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:padding="10dp" >
+
+                <!-- 左边的图标 -->
+
+                <ImageView
+                    android:id="@+id/iv_icon1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/remote" />
+
+                <!-- 右边的图标 -->
+
+                <ImageView
+                    android:id="@+id/iv_arrow1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/plus" />
+                <!-- 垂直据居中 -->
+
+
+                <!-- 中间显示文本部分 -->
+
+                <TextView
+                    android:id="@+id/tv_item_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toLeftOf="@id/iv_arrow1"
+                    android:layout_toRightOf="@id/iv_icon1"
+                    android:text="********"
+                    android:gravity="center_vertical"
+                    android:textSize="16dp"
+                    />
+            </RelativeLayout>
+
+            <!-- middle -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:padding="10dp" >
+
+                <!-- 左边的图标 -->
+
+                <ImageView
+                    android:id="@+id/iv_icon2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/get_location" />
+
+                <!-- 右边的图标 -->
+
+                <ImageView
+                    android:id="@+id/iv_arrow2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/plus" />
+                <!-- 垂直据居中 -->
+
+
+                <!-- 中间显示文本部分 -->
+
+                <TextView
+                    android:id="@+id/tv_me_collect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toLeftOf="@id/iv_arrow2"
+                    android:layout_toRightOf="@id/iv_icon2"
+                    android:text="*************"
+                    android:gravity="center_vertical"
+                    android:textSize="16dp"
+                    />
+            </RelativeLayout>
+
+            <!-- bottom -->
+
+            <RelativeLayout
+                android:id="@+id/rl_me_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:padding="10dp" >
+
+                <!-- 左边的图标 -->
+
+                <ImageView
+                    android:id="@+id/iv_icon3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/bugreport" />
+
+                <!-- 右边的图标 -->
+
+                <ImageView
+                    android:id="@+id/iv_arrow3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/plus" />
+                <!-- 垂直据居中 -->
+
+
+                <!-- 中间显示文本部分 -->
+
+                <TextView
+                    android:id="@+id/tv_item_title3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toLeftOf="@id/iv_arrow3"
+                    android:layout_toRightOf="@id/iv_icon3"
+                    android:text="意见反馈"
+                    android:gravity="center_vertical"
+                    android:textSize="16dp"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_me_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="26dp"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:padding="10dp" >
+
+                <!-- 左边的图标 -->
+
+                <ImageView
+                    android:id="@+id/iv_icon4"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/remote" />
+
+                <!-- 右边的图标 -->
+
+                <ImageView
+                    android:id="@+id/iv_arrow4"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/plus" />
+                <!-- 垂直据居中 -->
+
+
+                <!-- 中间显示文本部分 -->
+
+                <TextView
+                    android:id="@+id/tv_item_title4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toLeftOf="@id/iv_arrow4"
+                    android:layout_toRightOf="@id/iv_icon4"
+                    android:text="切换账户"
+                    android:gravity="center_vertical"
+                    android:textSize="16dp"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
