@@ -43,7 +43,7 @@ public class Aging_test
         return aging_test;
     }
 
-    private static void logout(Context context) {
+    public static void logout(Context context) {
         SharedPreferences preferences = context.getSharedPreferences(userSharePref, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
         editor.clear();

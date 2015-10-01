@@ -27,6 +27,8 @@ public class login_activity extends Activity  implements  ONHttpCallBack{
         super.onCreate(savedInstanceState);
         if (checkForUser()) {
             Intent intent=new Intent(login_activity.this,MainSlideActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+
             startActivity(intent);
             finish();
             return;
