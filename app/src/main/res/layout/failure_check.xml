@@ -3,4 +3,184 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <RelativeLayout
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/stat1"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp">
+
+        <TextView
+
+            android:id="@+id/light_stat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="车灯状态："
+            />
+
+
+        <TextView
+            android:id="@+id/light_stat_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/light_stat"
+            android:text="正常"
+            android:textColor="@android:color/holo_green_light"
+            />
+        <TextView
+            android:id="@+id/turn_stat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+         android:layout_marginLeft="50dp"
+            android:layout_toRightOf="@id/light_stat_value"
+            android:text="转把状态："
+            />
+
+
+        <TextView
+            android:id="@+id/turn_stat_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/turn_stat"
+            android:text="正常"
+            android:textColor="@android:color/holo_green_light"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp">
+
+        <TextView
+
+            android:id="@+id/voice_stat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="喇叭状态："
+            />
+
+
+        <TextView
+            android:layout_toRightOf="@id/voice_stat"
+            android:id="@+id/voice_stat_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="故障"
+            android:textColor="@android:color/holo_red_light"
+            />
+        <TextView
+            android:layout_marginLeft="50dp"
+            android:id="@+id/battery_stat"
+            android:layout_toRightOf="@id/voice_stat_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="电池状态："
+            />
+
+
+        <TextView
+            android:layout_toRightOf="@id/battery_stat"
+            android:id="@+id/battery_stat_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="正常"
+            android:textColor="@android:color/holo_green_light"
+            />
+
+    </RelativeLayout>
+    <RelativeLayout
+
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginLeft="60dp"
+            android:id="@+id/break_stat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="刹车把状态："
+            />
+
+
+        <TextView
+            android:id="@+id/break_stat_value"
+            android:layout_toRightOf="@id/break_stat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="正常"
+            android:textColor="@android:color/holo_green_light"
+            />
+        <TextView
+            android:layout_marginLeft="35dp"
+            android:layout_toRightOf="@id/break_stat_value"
+            android:id="@+id/contral_stat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="控制器状态："
+            />
+
+
+        <TextView
+            android:layout_toRightOf="@id/contral_stat"
+            android:id="@+id/contral_stat_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="故障"
+            android:textColor="@android:color/holo_red_light"
+            />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+        <TextView
+            android:layout_marginLeft="140dp"
+            android:id="@+id/power_driven_stat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="电机状态："
+            />
+
+
+        <TextView
+            android:id="@+id/power_driven_stat_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="正常"
+            android:layout_toRightOf="@id/power_driven_stat"
+            android:textColor="@android:color/holo_green_light"
+            />
+
+    </RelativeLayout>
+
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+           <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/bicycle"
+
+               android:layout_above="@+id/check_button" />
+       </LinearLayout>
+        <Button
+            android:id="@+id/check_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="开始检测"
+            android:textSize="19dp"
+            />
 </LinearLayout>

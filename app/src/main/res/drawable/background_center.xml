@@ -3,7 +3,7 @@
  <!-- 描边 -->
     <stroke android:width="0.5px" android:color="#CCCCCC"/>
     <!-- 实心背景色 -->
-    <solid android:color="#FFFFFF"/>
+    <solid android:color="#2e3436"/>
     <!--内部边距  -->
     <padding android:left="10px" android:top="5px" android:bottom="5px"/>
 </shape> 

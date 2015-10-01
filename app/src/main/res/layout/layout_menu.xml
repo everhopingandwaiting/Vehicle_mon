@@ -21,15 +21,16 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
-                android:src="@drawable/img_1" />
+                android:src="@drawable/location" />
 
             <TextView
+                android:id="@+id/location_vehicle"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="20dp"
                 android:layout_toRightOf="@id/one"
-                android:text="第1个Item"
+                android:text="车辆定位"
                 android:textColor="#f0f0f0"
                 android:textSize="20sp" />
         </RelativeLayout>
@@ -45,15 +46,16 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
-                android:src="@drawable/img_2" />
+                android:src="@drawable/personinfo" />
 
             <TextView
+                android:id="@+id/person_info_view"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="20dp"
                 android:layout_toRightOf="@id/two"
-                android:text="第2个Item"
+                android:text="个人信息"
                 android:textColor="#f0f0f0"
                 android:textSize="20sp" />
         </RelativeLayout>
@@ -69,15 +71,16 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
-                android:src="@drawable/img_3" />
+                android:src="@drawable/remote" />
 
             <TextView
+                android:id="@+id/remote_contral"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="20dp"
                 android:layout_toRightOf="@id/three"
-                android:text="第3个Item"
+                android:text="远程控制"
                 android:textColor="#f0f0f0"
                 android:textSize="20sp" />
         </RelativeLayout>
@@ -93,15 +96,16 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
-                android:src="@drawable/img_4" />
+                android:src="@drawable/bugreport" />
 
             <TextView
+                android:id="@+id/failure_check_"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="20dp"
                 android:layout_toRightOf="@id/four"
-                android:text="第一个Item"
+                android:text="故障检测"
                 android:textColor="#f0f0f0"
                 android:textSize="20sp" />
         </RelativeLayout>
@@ -117,15 +121,16 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
-                android:src="@drawable/img_5" />
+                android:src="@drawable/vehicle_info" />
 
             <TextView
+                android:id="@+id/vehicle_info_view"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="20dp"
                 android:layout_toRightOf="@id/five"
-                android:text="第5个Item"
+                android:text="车辆信息"
                 android:textColor="#f0f0f0"
                 android:textSize="20sp" />
         </RelativeLayout>

@@ -5,7 +5,7 @@
     <!-- 圆边角设置 -->
     <corners android:bottomLeftRadius="10px" android:bottomRightRadius="10px"/>
     <!-- 实心背景色 -->
-    <solid android:color="#FFFFFF"/>
+    <solid android:color="#2e3436"/>
     <!--内部边距  -->
     <padding android:left="10px"/>
 </shape> 

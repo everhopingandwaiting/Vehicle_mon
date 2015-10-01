@@ -13,7 +13,7 @@
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/reg_state"
+        android:text="@string/dev_num"
         android:id="@+id/textView2" />
 
     <EditText
@@ -75,8 +75,8 @@
         android:background="#39daf7"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="85dp"
-        />
 
+        />
 
 
 </LinearLayout>
