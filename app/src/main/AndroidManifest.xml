@@ -87,6 +87,7 @@
         <activity android:name=".Main_contral" />
         <activity android:name=".person_info" />
         <activity android:name=".vehicle_info" />
+        <activity android:name=".RealData_info" />
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"

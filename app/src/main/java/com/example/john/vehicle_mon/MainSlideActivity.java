@@ -63,6 +63,15 @@ public class MainSlideActivity extends Activity
 
 			}
 		});
+		TextView vehicle_realdata = (TextView) findViewById(R.id.vehicle_realdata);
+		vehicle_realdata.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(MainSlideActivity.this, RealData_info.class);
+				startActivity(intent);
+
+			}
+		});
 	}
 
 	public void toggleMenu(View view)

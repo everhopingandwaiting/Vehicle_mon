@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/stat1"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp">
+
+        <TextView
+
+            android:id="@+id/is_lock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设防状态："
+            />
+
+
+        <TextView
+            android:id="@+id/is_lock_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/is_lock"
+            android:text="正常"
+            android:textColor="@android:color/holo_green_light"
+            />
+        <TextView
+            android:id="@+id/is_vibrate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_toRightOf="@id/is_lock_value"
+            android:text="震动检测："
+            />
+
+
+        <TextView
+            android:id="@+id/is_vibrate_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/is_vibrate"
+            android:text="未有震动"
+            android:textColor="@android:color/holo_green_light"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp">
+
+        <TextView
+
+            android:id="@+id/is_electrify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="电源检测："
+            />
+
+
+        <TextView
+            android:layout_toRightOf="@id/is_electrify"
+            android:id="@+id/is_electrify_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="掉电"
+            android:textColor="@android:color/holo_red_light"
+            />
+        <TextView
+            android:layout_marginLeft="50dp"
+            android:id="@+id/is_lookcar"
+            android:layout_toRightOf="@id/is_electrify_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="寻车状态："
+            />
+
+
+        <TextView
+            android:layout_toRightOf="@id/is_lookcar"
+            android:id="@+id/is_lookcar_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="不开启"
+            android:textColor="@android:color/holo_red_light"
+            />
+
+    </RelativeLayout>
+    <RelativeLayout
+
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginLeft="60dp"
+            android:id="@+id/is_lockdoor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设防电门状态："
+            />
+
+
+        <TextView
+            android:id="@+id/is_lockdoor_value"
+            android:layout_toRightOf="@id/is_lockdoor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="接通"
+            android:textColor="@android:color/holo_green_light"
+            />
+        <TextView
+            android:layout_marginLeft="35dp"
+            android:layout_toRightOf="@id/is_lockdoor_value"
+            android:id="@+id/contral_stat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设防状态："
+            />
+
+
+        <TextView
+            android:layout_toRightOf="@id/contral_stat"
+            android:id="@+id/contral_stat_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="故障"
+            android:textColor="@android:color/holo_red_light"
+            />
+    </RelativeLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bicycle"
+
+            android:layout_above="@+id/check_rt_button" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/check_rt_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="开始检测"
+        android:textSize="19dp"
+        />
+    <RelativeLayout
+
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginLeft="60dp"
+            android:id="@+id/StandbyElectricity_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="备用电池电量信息："
+            />
+
+
+        <TextView
+            android:id="@+id/StandbyElectricity_info_value"
+            android:layout_toRightOf="@id/StandbyElectricity_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0v"
+            android:textColor="@android:color/holo_green_light"
+            />
+        <TextView
+            android:layout_marginLeft="35dp"
+            android:layout_toRightOf="@id/StandbyElectricity_info"
+            android:id="@+id/Electricity_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="电量信息："
+            />
+
+
+        <TextView
+            android:layout_toRightOf="@id/Electricity_info"
+                android:id="@+id/Electricity_info_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0V"
+            android:textColor="@android:color/holo_red_light"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

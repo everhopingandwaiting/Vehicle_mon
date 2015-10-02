@@ -21,8 +21,8 @@ public class net_util {
     public static String mainUrl = "http://123.57.210.236:1050/BHttpServer/";
     public static String loginCheck = "User.ashx";
 
-    public static String RealTimeDataBl = "RTDataBL.ashx";
-    public static String getLocationInfo = "RTDataBL.ashx";
+    public static String RealTimeDataBl = "rtData.ashx";
+    public static String getLocationInfo = "rtData.ashx";
     public static String getVehicleList = "ListGet.ashx";
 
     public static void postForResult(final String url, final RequestBody requestBody, final ONHttpCallBack onHttpCallBack) {
@@ -53,8 +53,9 @@ public class net_util {
          }.start();
     }
 
-    public static void goFor(final String url, final ONHttpCallBack onHttpCallBack, final JsonObject jsonObject) {
+    public static void goFor( String url, final ONHttpCallBack onHttpCallBack, final JsonObject jsonObject) {
         final String newURL = mainUrl + url;
+        System.out.println(newURL+"*********************我是请求地址*****************************");
         new Thread() {
             @Override
             public void run() {
@@ -85,14 +86,15 @@ public class net_util {
                 return;
             }
             JsonObject object = element.getAsJsonObject();
-            if (object.has("state")) {
-                String stat = object.get("state").getAsString();
-                if (stat.equals("ExceptionFailure")) {
-                    onHttpCallBack.onHttpCallBack(null);
-                    return;
-                }
-            }
             onHttpCallBack.onHttpCallBack(object);
+//            if (object.has("state")) {
+//                String stat = object.get("state").getAsString();
+//                if (stat.equals("ExceptionFailure")) {
+//                    onHttpCallBack.onHttpCallBack(null);
+//                    return;
+//                }
+//            }
+
         } catch (IOException e) {
             e.printStackTrace();
             onHttpCallBack.onHttpCallBack(null);

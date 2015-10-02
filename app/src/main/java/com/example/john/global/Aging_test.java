@@ -11,7 +11,7 @@ public class Aging_test
 
     private static final long validityTime = 1000 * 60 * 60 * 24 * 3;
     private static String lastLoginDate = "lastLoginDate";
-    private static String userSharePref = "user_cache";
+    public static String userSharePref = "user_cache";
     private static String tokenCache = "tokenCache";
     private static String userName = "userName";
     static Aging_test agingTest;

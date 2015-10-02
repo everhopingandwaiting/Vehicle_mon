@@ -158,4 +158,72 @@
             android:layout_gravity="center_horizontal"
             android:layout_toRightOf="@+id/Hold_set"/>
     </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/failure_up"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/hold" />
+
+        <TextView
+            android:id="@+id/failure_up_set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/failure_up"
+            android:text="故障上报阀"
+            android:textColor="#f0f0f0"
+            android:textSize="20sp" />
+        <ToggleButton
+
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:text="故障上报阀"
+            android:id="@+id/toggle_btn5"
+            android:background="#39daf7"
+            android:layout_marginLeft="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_toRightOf="@+id/failure_up_set"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/location_up"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/hold" />
+
+        <TextView
+            android:id="@+id/location_up_set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/location_up"
+            android:text="定位上报阀"
+            android:textColor="#f0f0f0"
+            android:textSize="20sp" />
+        <ToggleButton
+
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:text="故障上报阀"
+            android:id="@+id/toggle_btn6"
+            android:background="#39daf7"
+            android:layout_marginLeft="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_toRightOf="@+id/location_up_set"/>
+    </RelativeLayout>
 </LinearLayout>
