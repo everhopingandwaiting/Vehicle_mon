@@ -7,7 +7,9 @@ import android.view.View;
 import android.view.Window;
 import android.widget.TextView;
 
-public class MainSlideActivity extends Activity
+import java.io.Serializable;
+
+public class MainSlideActivity extends Activity  implements Serializable
 {
 	private SlidingMenu mMenu;
 

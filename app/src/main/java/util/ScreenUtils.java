@@ -8,13 +8,15 @@ import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.WindowManager;
 
+import java.io.Serializable;
+
 /**
  * 获得屏幕相关的辅助类
  * 
  * @author zhy
  * 
  */
-public class ScreenUtils
+public class ScreenUtils implements Serializable
 {
 	private ScreenUtils()
 	{

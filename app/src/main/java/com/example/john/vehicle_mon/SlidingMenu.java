@@ -9,12 +9,13 @@ import android.view.ViewGroup;
 import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 
-import com.example.john.vehicle_mon.R;
 import com.nineoldandroids.view.ViewHelper;
+
+import java.io.Serializable;
 
 import util.ScreenUtils;
 
-public class SlidingMenu extends HorizontalScrollView
+public class SlidingMenu extends HorizontalScrollView implements Serializable
 {
 	/**
 	 * 屏幕宽度

@@ -12,13 +12,15 @@ import android.widget.Toast;
 
 import com.google.gson.JsonObject;
 
+import java.io.Serializable;
+
 import util.ONHttpCallBack;
 import util.net_util;
 
 /**
  * Created by john on 15-9-30.
  */
-public class failure_check extends Activity {
+public class failure_check extends Activity  implements Serializable {
     private TextView light_stat_value,
             turn_stat_value,
             voice_stat_value,

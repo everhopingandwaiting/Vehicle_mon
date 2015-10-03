@@ -12,13 +12,15 @@ import android.widget.Toast;
 
 import com.google.gson.JsonObject;
 
+import java.io.Serializable;
+
 import util.ONHttpCallBack;
 import util.net_util;
 
 /**
  * Created by john on 15-10-2.
  */
-public class RealData_info  extends Activity{
+public class RealData_info  extends Activity implements Serializable{
     private TextView is_lock_value,is_vibrate_value,is_electrify_value,
             is_lookcar_value, is_lockdoor_value,   contral_stat_value,
             StandbyElectricity_info_value, Electricity_info_value;

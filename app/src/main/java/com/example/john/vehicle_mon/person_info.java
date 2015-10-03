@@ -8,10 +8,12 @@ import android.widget.Button;
 
 import com.example.john.global.Aging_test;
 
+import java.io.Serializable;
+
 /**
  * Created by john on 15-9-30.
  */
-public class person_info extends Activity {
+public class person_info extends Activity  implements Serializable{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

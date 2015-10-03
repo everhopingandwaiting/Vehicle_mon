@@ -10,11 +10,12 @@ import com.squareup.okhttp.RequestBody;
 import com.squareup.okhttp.Response;
 
 import java.io.IOException;
+import java.io.Serializable;
 
 /**
  * Created by john on 15-10-1.
  */
-public class net_util {
+public class net_util implements Serializable {
     private static final MediaType MEDIA_TYPE_MARKDOWN =
             MediaType.parse("text/x-markdown; charset=utf-8");
 

@@ -5,13 +5,15 @@ import android.content.SharedPreferences;
 
 import com.google.gson.JsonObject;
 
+import java.io.Serializable;
+
 import util.ONHttpCallBack;
 import util.net_util;
 
 /**
  * Created by john on 15-10-3.
  */
-public class Request_all_info {
+public class Request_all_info implements Serializable {
   public   static void requestForRealData( final Context context) {
 
         JsonObject object = new JsonObject();

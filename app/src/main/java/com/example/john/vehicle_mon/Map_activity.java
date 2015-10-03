@@ -28,13 +28,15 @@ import com.baidu.mapapi.utils.CoordinateConverter;
 import com.baidu.nplatform.comapi.map.MapController;
 import com.google.gson.JsonObject;
 
+import java.io.Serializable;
+
 import util.ONHttpCallBack;
 import util.net_util;
 
 /**
  * Created by john on 15-9-10.
  */
-public class Map_activity extends Activity {
+public class Map_activity extends Activity  implements Serializable{
 
     private MapView mv = null;
     private Toast toast;

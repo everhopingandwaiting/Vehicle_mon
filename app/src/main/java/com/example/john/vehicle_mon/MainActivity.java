@@ -10,7 +10,9 @@ import android.widget.Button;
 
 import com.umeng.analytics.MobclickAgent;
 
-public class MainActivity extends AppCompatActivity {
+import java.io.Serializable;
+
+public class MainActivity extends AppCompatActivity  implements Serializable{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

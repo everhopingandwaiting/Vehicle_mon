@@ -12,13 +12,14 @@ import android.widget.ToggleButton;
 import com.example.john.global.Request_all_info;
 import com.google.gson.JsonObject;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
 /**
  * Created by john on 15-9-26.
  */
-public class Remote_contral extends Activity{
+public class Remote_contral extends Activity implements Serializable{
     private ToggleButton                    lookcar_toggle_btn1,
             electricity_toggle_btn2,
             set_lock_toggle_btn3,

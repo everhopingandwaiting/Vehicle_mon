@@ -3,10 +3,12 @@ package com.example.john.global;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import java.io.Serializable;
+
 /**
  * Created by john on 15-10-1.
  */
-public class Aging_test
+public class Aging_test implements Serializable
 {
 
     private static final long validityTime = 1000 * 60 * 60 * 24 * 3;

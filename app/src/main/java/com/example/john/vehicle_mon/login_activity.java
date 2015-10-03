@@ -13,13 +13,15 @@ import com.example.john.global.Aging_test;
 import com.google.gson.JsonObject;
 import com.umeng.analytics.MobclickAgent;
 
+import java.io.Serializable;
+
 import util.ONHttpCallBack;
 import util.net_util;
 
 /**
  * Created by john on 15-9-9.
  */
-public class login_activity extends Activity  implements  ONHttpCallBack{
+public class login_activity extends Activity  implements  ONHttpCallBack ,Serializable{
     private EditText loginName,passwd;
     private  String lname, pd;
     @Override
@@ -89,7 +91,7 @@ public class login_activity extends Activity  implements  ONHttpCallBack{
                     String rltStr = jsonObject.get("state").getAsString();
                     if (rltStr.equals("success".toUpperCase())) {
 //                        jsonObject.get("token").getAsString()
-                        Aging_test.getAgingTest(login_activity.this).loginSucceed("qwertyuiop0987654321",lname, login_activity.this);
+                        Aging_test.getAgingTest(login_activity.this).loginSucceed("qwertyuiop0987654321", lname, login_activity.this);
                         Intent intent = new Intent(login_activity.this, MainSlideActivity.class);
                         startActivity(intent);
                         finish();
