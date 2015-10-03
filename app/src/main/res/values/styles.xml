@@ -6,5 +6,7 @@
         <!-- Customize your theme here. -->
     </style>
     <style name="AppTheme2" parent="Theme.AppCompat.NoActionBar" />
-
+    <style name="MyToggleButton" parent="@android:style/Widget.CompoundButton">
+        <item name="android:button">@drawable/setting_checkbox_button</item>
+    </style>
 </resources>

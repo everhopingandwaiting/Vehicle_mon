@@ -171,6 +171,8 @@ public class Map_activity extends Activity {
                 MapStatusUpdate u1 = MapStatusUpdateFactory.zoomTo(17);
                 baiduMap.setMapStatus(u1);
             }
+
+
         }, object);
     }
 

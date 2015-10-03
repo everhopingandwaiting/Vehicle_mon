@@ -127,7 +127,7 @@
 
         <TextView
             android:layout_toRightOf="@id/contral_stat"
-            android:id="@+id/contral_stat_value"
+            android:id="@+id/contral_stat_value_fc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="故障"

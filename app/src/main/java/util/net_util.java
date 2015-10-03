@@ -24,6 +24,7 @@ public class net_util {
     public static String RealTimeDataBl = "rtData.ashx";
     public static String getLocationInfo = "rtData.ashx";
     public static String getVehicleList = "ListGet.ashx";
+    public static String order_info = "Unit.ashx";
 
     public static void postForResult(final String url, final RequestBody requestBody, final ONHttpCallBack onHttpCallBack) {
         new Thread(){

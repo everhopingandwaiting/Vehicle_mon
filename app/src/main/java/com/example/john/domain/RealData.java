@@ -58,4 +58,15 @@ public class RealData implements Serializable {
         char[] cs = str.toCharArray();
         return cs;
     }
+
+    @Override
+    public String toString() {
+        return "RealData{" +
+                "unitnumber='" + unitnumber + '\'' +
+                ", MonitoringInfo='" + MonitoringInfo + '\'' +
+                ", Fault='" + Fault + '\'' +
+                ", StandbyElectricity='" + StandbyElectricity + '\'' +
+                ", Electricity='" + Electricity + '\'' +
+                '}';
+    }
 }

@@ -47,7 +47,7 @@
             android:layout_width="60dp"
             android:layout_height="40dp"
             android:text="寻车设置"
-            android:id="@+id/toggleButton"
+            android:id="@+id/lookcar_toggle_btn1"
             android:background="#39daf7"
             android:layout_marginLeft="70dp"
             android:layout_gravity="center_horizontal"
@@ -83,7 +83,8 @@
             android:layout_width="60dp"
             android:layout_height="40dp"
             android:text="电门设置"
-            android:id="@+id/toggle_btn2"
+
+            android:id="@+id/electricity_toggle_btn2"
             android:background="#39daf7"
             android:layout_marginLeft="70dp"
             android:layout_gravity="center_horizontal"
@@ -117,7 +118,7 @@
             android:layout_width="60dp"
             android:layout_height="40dp"
             android:text="设防设置"
-            android:id="@+id/toggle_btn3"
+            android:id="@+id/set_lock_toggle_btn3"
             android:background="#39daf7"
             android:layout_marginLeft="70dp"
             android:layout_gravity="center_horizontal"
@@ -152,78 +153,121 @@
             android:layout_width="60dp"
             android:layout_height="40dp"
             android:text="支撑架设置"
-            android:id="@+id/toggle_btn4"
+            android:id="@+id/hold_toggle_btn4"
             android:background="#39daf7"
             android:layout_marginLeft="50dp"
             android:layout_gravity="center_horizontal"
             android:layout_toRightOf="@+id/Hold_set"/>
     </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content" >-->
 
-        <ImageView
-            android:id="@+id/failure_up"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:src="@drawable/hold" />
+        <!--<ImageView-->
+            <!--android:id="@+id/failure_up"-->
+            <!--android:layout_width="40dp"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="20dp"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:src="@drawable/hold" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/failure_up_set"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="20dp"-->
+            <!--android:layout_toRightOf="@id/failure_up"-->
+            <!--android:text="故障上报阀"-->
+            <!--android:textColor="#f0f0f0"-->
+            <!--android:textSize="20sp" />-->
+        <!--<ToggleButton-->
+
+            <!--android:layout_width="60dp"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:text="故障上报阀"-->
+            <!--android:id="@+id/toggle_btn5"-->
+            <!--android:background="#39daf7"-->
+            <!--android:layout_marginLeft="50dp"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:layout_toRightOf="@+id/failure_up_set"/>-->
+    <!--</RelativeLayout>-->
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content" >-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/location_up"-->
+            <!--android:layout_width="40dp"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="20dp"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:src="@drawable/hold" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/location_up_set"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="20dp"-->
+            <!--android:layout_toRightOf="@id/location_up"-->
+            <!--android:text="定位上报阀"-->
+            <!--android:textColor="#f0f0f0"-->
+            <!--android:textSize="20sp" />-->
+        <!--<ToggleButton-->
+
+            <!--android:layout_width="60dp"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:text="故障上报阀"-->
+            <!--android:id="@+id/toggle_btn6"-->
+            <!--android:background="#39daf7"-->
+            <!--android:layout_marginLeft="50dp"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:layout_toRightOf="@+id/location_up_set"/>-->
+    <!--</RelativeLayout>-->
+    <RelativeLayout
+
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/failure_up_set"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/StandbyElectricity_info_rc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="20dp"
-            android:layout_toRightOf="@id/failure_up"
-            android:text="故障上报阀"
-            android:textColor="#f0f0f0"
-            android:textSize="20sp" />
-        <ToggleButton
+            android:text="备用电池电量信息："
+            />
 
-            android:layout_width="60dp"
-            android:layout_height="40dp"
-            android:text="故障上报阀"
-            android:id="@+id/toggle_btn5"
-            android:background="#39daf7"
-            android:layout_marginLeft="50dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_toRightOf="@+id/failure_up_set"/>
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-
-        <ImageView
-            android:id="@+id/location_up"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:src="@drawable/hold" />
 
         <TextView
-            android:id="@+id/location_up_set"
+            android:id="@+id/StandbyElectricity_info_value_rc"
+            android:layout_toRightOf="@id/StandbyElectricity_info_rc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="20dp"
-            android:layout_toRightOf="@id/location_up"
-            android:text="定位上报阀"
-            android:textColor="#f0f0f0"
-            android:textSize="20sp" />
-        <ToggleButton
+            android:text="0.0v"
+            android:textColor="@android:color/holo_green_light"
+            />
+        <TextView
+            android:layout_marginLeft="60dp"
+            android:layout_toRightOf="@id/StandbyElectricity_info_rc"
+            android:id="@+id/Electricity_info_rc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="电量信息："
+            />
 
-            android:layout_width="60dp"
-            android:layout_height="40dp"
-            android:text="故障上报阀"
-            android:id="@+id/toggle_btn6"
-            android:background="#39daf7"
-            android:layout_marginLeft="50dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_toRightOf="@+id/location_up_set"/>
+
+        <TextView
+            android:layout_toRightOf="@id/Electricity_info_rc"
+            android:id="@+id/Electricity_info_value_rc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.0V"
+            android:textColor="@android:color/holo_red_light"
+            />
     </RelativeLayout>
 </LinearLayout>
