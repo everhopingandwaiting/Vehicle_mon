@@ -110,6 +110,7 @@ public class Remote_contral extends Activity{
                     Toast.makeText(context, "设防解锁",  Toast.LENGTH_SHORT
                     ).show();
                     initTbnStatus();
+//                    kkkk
                 }
             }
 
