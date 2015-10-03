@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.CompoundButton;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.example.john.global.Request_all_info;
@@ -43,25 +44,87 @@ public class Remote_contral extends Activity{
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    setSF(true);
+                    setLOOKCAR(true);
+                    Toast.makeText(context, "寻车不开启", Toast.LENGTH_SHORT
+                    ).show();
                     initTbnStatus();
                 } else {
-                    setSF(false);
+                    setLOOKCAR(false);
+                    Toast.makeText(context, "开启一次", Toast.LENGTH_SHORT
+                    ).show();
+                    initTbnStatus();
                 }
             }
 
-            private void setSF(boolean b) {
-                      JsonObject object ;
+            private void setLOOKCAR(boolean b) {
+                JsonObject object;
                 if (b) {
-                   object= orderList().get("SF");
+                    object = orderList().get("XCBKQ");
+                } else {
+                    object = orderList().get("XCKQ");
+                }
+                Request_all_info.requestOrderCallback(getApplicationContext(), object);
+
+
+            }
+        });
+           electricity_toggle_btn2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+               @Override
+               public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                   if (isChecked&&set_lock_toggle_btn3.isChecked()) {
+                       setELDoor(true);
+                       Toast.makeText(context, "电门断开",  Toast.LENGTH_SHORT
+                       ).show();
+                       initTbnStatus();
+                   }
+                   else if(set_lock_toggle_btn3.isChecked()&&!isChecked) {
+                       setELDoor(false);
+                       Toast.makeText(context, "电门接通",  Toast.LENGTH_SHORT
+                       ).show();
+                       initTbnStatus();
+                   }
+               }
+
+               private void setELDoor(boolean b) {
+                   JsonObject object ;
+                   if (b) {
+                       object= orderList().get("DMDK");
+                   } else {
+                       object = orderList().get("DMJT");
+                   }
+                   Request_all_info.requestOrderCallback(getApplicationContext() , object);
+
+
+               }
+           });
+        set_lock_toggle_btn3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    setLOCK(true);
+                    Toast.makeText(context, "设防开启",  Toast.LENGTH_SHORT
+                    ).show();
+                    initTbnStatus();
+                } else {
+                    setLOCK(false);
+                    Toast.makeText(context, "设防解锁",  Toast.LENGTH_SHORT
+                    ).show();
+                    initTbnStatus();
+                }
+            }
+
+            private void setLOCK(boolean b) {
+                JsonObject object ;
+                if (b) {
+                    object= orderList().get("SF");
                 } else {
                     object = orderList().get("JF");
                 }
                 Request_all_info.requestOrderCallback(getApplicationContext() , object);
 
-
             }
         });
+
     }
 
     void initTbnStatus() {
