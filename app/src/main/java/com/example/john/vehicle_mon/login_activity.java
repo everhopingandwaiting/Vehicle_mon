@@ -24,6 +24,7 @@ import util.net_util;
 public class login_activity extends Activity  implements  ONHttpCallBack ,Serializable{
     private EditText loginName,passwd;
     private  String lname, pd;
+    private EditText unitnum;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

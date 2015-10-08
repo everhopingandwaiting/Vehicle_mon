@@ -16,7 +16,7 @@ import java.io.Serializable;
  * Created by john on 15-10-1.
  */
 public class net_util implements Serializable {
-    private static final MediaType MEDIA_TYPE_MARKDOWN =
+    public static final MediaType MEDIA_TYPE_MARKDOWN =
             MediaType.parse("text/x-markdown; charset=utf-8");
 
     public static String mainUrl = "http://123.57.210.236:1050/BHttpServer/";
@@ -69,7 +69,7 @@ public class net_util implements Serializable {
         }.start();
     }
 
-    private static void requestForResponse(Request request, ONHttpCallBack onHttpCallBack) {
+    public static void requestForResponse(Request request, ONHttpCallBack onHttpCallBack) {
         OkHttpClient httpClient = new OkHttpClient();
         Response response = null;
 

@@ -10,12 +10,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.gson.JsonObject;
+import com.example.john.global.Request_all_info;
 
 import java.io.Serializable;
-
-import util.ONHttpCallBack;
-import util.net_util;
 
 /**
  * Created by john on 15-10-2.
@@ -38,7 +35,7 @@ public class RealData_info  extends Activity implements Serializable{
          check_rt_button.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
-                 requestForRealData();
+                 Request_all_info.requestForRealData(context);
                  handleData();
 
              }
@@ -46,48 +43,48 @@ public class RealData_info  extends Activity implements Serializable{
     }
 
 
-    void requestForRealData() {
-        //  SharedPreferences preferences = getSharedPreferences(Aging_test.getAgingTest(this).userSharePref, MODE_PRIVATE);
-
-        JsonObject object = new JsonObject();
-        object.addProperty("action", "rtdata");
-
-        //  object.addProperty("user", preferences.getString("userName", "admin"));
-        object.addProperty("unitnumber", "123456789012345");
-      //   System.out.println(preferences.getString("user", "admin") + "------------------*******************测试******************--------");
-        net_util.goFor(net_util.RealTimeDataBl, new ONHttpCallBack() {
-            @Override
-            public void onHttpCallBack(JsonObject jsonObject) {
-                if (jsonObject == null) {
-                    showErrorToast();
-                    return;
-                }
-//              RealData   dataR = new RealData();
-//                dataR.setUnitnumber(jsonObject.get("unitnumber").getAsString());
-//                dataR.setMonitoringInfo(jsonObject.get("MonitoringInfo").getAsString());
-//                dataR.setFault(jsonObject.get("Fault").getAsString());
-//                dataR.setStandbyElectricity(jsonObject.get("StandbyElectricity").getAsString());
-//                dataR.setElectricity(jsonObject.get("Electricity").getAsString());
-               /*
-               *     处理数据
-               *
-               * */
-
-
-                SharedPreferences preferences = context.getSharedPreferences("RealData", MODE_PRIVATE);
-                SharedPreferences.Editor editor = preferences.edit();
-                editor.putString("unitnumber", jsonObject.get("unitnumber").getAsString())
-                        .putString("MonitoringInfo", jsonObject.get("MonitoringInfo").getAsString())
-                        .putString("Fault", jsonObject.get("Fault").getAsString())
-                        .putString("StandbyElectricity", jsonObject.get("StandbyElectricity").getAsString())
-                        .putString("Electricity", jsonObject.get("Electricity").getAsString())
-                        .apply();
-
-
-            }
-        }, object);
-
-  }
+//    void requestForRealData() {
+//        //  SharedPreferences preferences = getSharedPreferences(Aging_test.getAgingTest(this).userSharePref, MODE_PRIVATE);
+//
+//        JsonObject object = new JsonObject();
+//        object.addProperty("action", "rtdata");
+//
+//        //  object.addProperty("user", preferences.getString("userName", "admin"));
+//        object.addProperty("unitnumber", "123456789012345");
+//      //   System.out.println(preferences.getString("user", "admin") + "------------------*******************测试******************--------");
+//        net_util.goFor(net_util.RealTimeDataBl, new ONHttpCallBack() {
+//            @Override
+//            public void onHttpCallBack(JsonObject jsonObject) {
+//                if (jsonObject == null) {
+//                    showErrorToast();
+//                    return;
+//                }
+////              RealData   dataR = new RealData();
+////                dataR.setUnitnumber(jsonObject.get("unitnumber").getAsString());
+////                dataR.setMonitoringInfo(jsonObject.get("MonitoringInfo").getAsString());
+////                dataR.setFault(jsonObject.get("Fault").getAsString());
+////                dataR.setStandbyElectricity(jsonObject.get("StandbyElectricity").getAsString());
+////                dataR.setElectricity(jsonObject.get("Electricity").getAsString());
+//               /*
+//               *     处理数据
+//               *
+//               * */
+//
+//
+//                SharedPreferences preferences = context.getSharedPreferences("RealData", MODE_PRIVATE);
+//                SharedPreferences.Editor editor = preferences.edit();
+//                editor.putString("unitnumber", jsonObject.get("unitnumber").getAsString())
+//                        .putString("MonitoringInfo", jsonObject.get("MonitoringInfo").getAsString())
+//                        .putString("Fault", jsonObject.get("Fault").getAsString())
+//                        .putString("StandbyElectricity", jsonObject.get("StandbyElectricity").getAsString())
+//                        .putString("Electricity", jsonObject.get("Electricity").getAsString())
+//                        .apply();
+//
+//
+//            }
+//        }, object);
+//
+//  }
 
     void showErrorToast(){
         runOnUiThread(new Runnable() {
@@ -102,60 +99,78 @@ public class RealData_info  extends Activity implements Serializable{
     void handleData() {
 
         SharedPreferences preferences = context.getSharedPreferences("RealData", MODE_PRIVATE);
-        String str = preferences.getString("MonitoringInfo", "error");
+        String str = preferences.getString("MonitoringInfo", "errorers");
         char[] ch = str.toCharArray();
         for (int i = 0; i <ch.length ; i++) {
              System.out.println(ch[i]);
         }
 //        char ch[] = new char[]{0, 0, 0, 0, 0, 0, 0, 0};
         System.out.println("str"+str+ ch.toString() + "@@@@@@@@@@@@@@@@@@鸡巴鬼 啊  @@@@@@@@@@@@@@@@@@@@@" + "\n" );
-        if ("0".equals(ch[2])) {
+        if ('0'==(ch[2])) {
             is_lock_value.setText("正常");
             is_lock_value.setTextColor(Color.GREEN);
-        } else {
+        } else if('1'==(ch[2])) {
             is_lock_value.setText("报警");
             is_lock_value.setTextColor(Color.RED);
         }
-        if ("0".equals(ch[3])) {
+          else {
+            is_lock_value.setText("错误");
+            is_lock_value.setTextColor(Color.RED);
+        }
+//
+        if ('0'==(ch[3])) {
             is_vibrate_value.setText("未震动");
             is_vibrate_value.setTextColor(Color.GREEN);
-        } else {
+        } else if ('1'==(ch[3])) {
             is_vibrate_value.setText("报警");
             is_vibrate_value.setTextColor(Color.RED);
 
+        } else {
+            is_vibrate_value.setText("错误");
+            is_vibrate_value.setTextColor(Color.RED);
         }
-        if ("0".equals(ch[4])) {
+        if ('0'==(ch[4])) {
             is_electrify_value.setText("掉电");
             is_electrify_value.setTextColor(Color.RED);
-        } else {
+        } else if ('1'==(ch[4])) {
             is_electrify_value.setText("在线");
             is_electrify_value.setTextColor(Color.GREEN);
-
+        } else {
+            is_electrify_value.setText("错误");
+            is_electrify_value.setTextColor(Color.GREEN);
         }
-        if ("0".equals(ch[5])) {
+        if ('0'==(ch[5])) {
             is_lookcar_value.setText("不开启");
             is_lookcar_value.setTextColor(Color.GREEN);
 
-        } else {
+        } else if ('1'==(ch[5])) {
             is_lookcar_value.setText("开启一次");
             is_lookcar_value.setTextColor(Color.RED);
-
+        } else {
+            is_lookcar_value.setText("错误");
+            is_lookcar_value.setTextColor(Color.RED);
         }
-        if ("0".equals(ch[6])) {
+        if ('0'==(ch[6])) {
             is_lockdoor_value.setText("断开");
             is_lockdoor_value.setTextColor(Color.RED);
 
-        } else {
+        } else if ('1'==(ch[6])) {
             is_lockdoor_value.setTextColor(Color.GREEN);
             is_lockdoor_value.setText("接通");
+        } else {
+            is_lockdoor_value.setTextColor(Color.GREEN);
+            is_lockdoor_value.setText("错误");
         }
-        if ("0".equals(ch[7])) {
+        if ('0'==(ch[7])) {
             contral_stat_value.setText("设防");
             contral_stat_value.setTextColor(Color.GREEN);
 
-        } else {
+        } else if ('1'==(ch[7])) {
             contral_stat_value.setTextColor(Color.RED);
             contral_stat_value.setText("解防");
+        } else {
+            contral_stat_value.setTextColor(Color.RED);
+            contral_stat_value.setText("错误");
         }
         StandbyElectricity_info_value.setText(preferences.getString("StandbyElectricity",null)+"V  ");
         Electricity_info_value.setText(preferences.getString("Electricity",null)+"V");

@@ -1,6 +1,7 @@
 package com.example.john.vehicle_mon;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -51,11 +52,12 @@ public class Map_activity extends Activity  implements Serializable{
     private MyLocationConfiguration.LocationMode locationMode;
     private BitmapDescriptor bitmapDescriptor;
     private OverlayOptions vehicle_options;
-
+    private Context context;
     public MyLocationListemer myListener = new MyLocationListemer();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        context = getApplicationContext();
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         SDKInitializer.initialize(getApplicationContext());
         setContentView(R.layout.map_activity);
@@ -147,7 +149,7 @@ public class Map_activity extends Activity  implements Serializable{
         object.addProperty("action", "gps");
 //        测试  数据   不完善   unitnumber 和  username  暂时 未  唯一绑定 。。。。。。
       //  object.addProperty("user", preferences.getString("userName", "admin"));
-        object.addProperty("unitnumber", "123456789012345");
+        object.addProperty("unitnumber", context.getSharedPreferences("RealData", Context.MODE_PRIVATE).getString("unitnumber", null));
        // System.out.println(preferences.getString("userName", "admin") + "------------------*******************测试******************--------");
         net_util.goFor(net_util.getLocationInfo, new ONHttpCallBack() {
             @Override

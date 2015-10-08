@@ -15,11 +15,10 @@ import util.net_util;
  */
 public class Request_all_info implements Serializable {
   public   static void requestForRealData( final Context context) {
-
         JsonObject object = new JsonObject();
         object.addProperty("action", "rtdata");
 
-        object.addProperty("unitnumber", "123456789012345");
+      object.addProperty("unitnumber", context.getSharedPreferences("RealData", Context.MODE_PRIVATE).getString("unitnumber", null));
         net_util.goFor(net_util.RealTimeDataBl, new ONHttpCallBack() {
             @Override
             public void onHttpCallBack(JsonObject jsonObject) {
@@ -27,7 +26,6 @@ public class Request_all_info implements Serializable {
 
                     return;
                 }
-
                 SharedPreferences preferences = context.getSharedPreferences("RealData", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = preferences.edit();
                 editor.putString("unitnumber", jsonObject.get("unitnumber").getAsString())
