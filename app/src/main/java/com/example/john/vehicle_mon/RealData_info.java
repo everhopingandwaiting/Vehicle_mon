@@ -173,7 +173,7 @@ public class RealData_info  extends Activity implements Serializable{
             contral_stat_value.setText("错误");
         }
         StandbyElectricity_info_value.setText(preferences.getString("StandbyElectricity",null)+"V  ");
-        Electricity_info_value.setText(preferences.getString("Electricity",null)+"V");
+        Electricity_info_value.setText(preferences.getString("Electricity",null)+"V   ");
 
 
     }

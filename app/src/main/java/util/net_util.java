@@ -27,7 +27,7 @@ public class net_util implements Serializable {
     public static String getVehicleList = "ListGet.ashx";
     public static String order_info = "Unit.ashx";
 
-    public static void postForResult(final String url, final RequestBody requestBody, final ONHttpCallBack onHttpCallBack) {
+    public synchronized static void postForResult(final String url, final RequestBody requestBody, final ONHttpCallBack onHttpCallBack) {
         new Thread(){
             @Override
             public void run() {
@@ -42,7 +42,7 @@ public class net_util implements Serializable {
 
     }
 
-    public static void postForLogin(final JsonObject jsonObject, final ONHttpCallBack onHttpCallBack) {
+    public  synchronized static void postForLogin(final JsonObject jsonObject, final ONHttpCallBack onHttpCallBack) {
          new Thread(){
              @Override
              public void run() {
@@ -55,7 +55,7 @@ public class net_util implements Serializable {
          }.start();
     }
 
-    public static void goFor( String url, final ONHttpCallBack onHttpCallBack, final JsonObject jsonObject) {
+    public synchronized static void goFor( String url, final ONHttpCallBack onHttpCallBack, final JsonObject jsonObject) {
         final String newURL = mainUrl + url;
         System.out.println(newURL+"*********************我是请求地址*****************************");
         new Thread() {
@@ -69,7 +69,7 @@ public class net_util implements Serializable {
         }.start();
     }
 
-    public static void requestForResponse(Request request, ONHttpCallBack onHttpCallBack) {
+    public  synchronized static void requestForResponse(Request request, ONHttpCallBack onHttpCallBack) {
         OkHttpClient httpClient = new OkHttpClient();
         Response response = null;
 

@@ -164,7 +164,7 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:layout_marginLeft="60dp"
+            android:layout_marginLeft="55dp"
             android:id="@+id/StandbyElectricity_info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -181,7 +181,7 @@
             android:textColor="@android:color/holo_green_light"
             />
         <TextView
-            android:layout_marginLeft="35dp"
+            android:layout_marginLeft="45dp"
             android:layout_toRightOf="@id/StandbyElectricity_info"
             android:id="@+id/Electricity_info"
             android:layout_width="wrap_content"

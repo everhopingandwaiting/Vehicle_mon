@@ -4,7 +4,9 @@
     android:layout_height="match_parent"
     android:id="@+id/layout1"
     android:layout_marginTop="40dp"
+
     >
+
     <TextView
         android:id="@+id/remote_UI"
         android:layout_width="wrap_content"
@@ -41,19 +43,34 @@
             android:layout_toRightOf="@id/Look_set1"
             android:text="寻车设置"
             android:textColor="#f0f0f0"
-            android:textSize="20sp" />
-        <ToggleButton
+            android:textSize="20sp"
+            />
+        <Button
 
             android:layout_width="60dp"
             android:layout_height="40dp"
-            android:text="寻车设置"
+            android:text="开启"
+
+
+            android:layout_marginLeft="70dp"
+
             android:id="@+id/lookcar_toggle_btn1"
             android:background="#39daf7"
-            android:layout_marginLeft="70dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_toRightOf="@+id/Look_set"
 
-            />
+
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/lookcar_toggle_btn12" />
+        <Button
+
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:text="关闭"
+            android:id="@+id/lookcar_toggle_btn12"
+            android:background="#39daf7"
+
+
+
+            android:layout_alignParentEnd="true" />
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
@@ -78,17 +95,29 @@
             android:text="电门设置"
             android:textColor="#f0f0f0"
             android:textSize="20sp" />
-        <ToggleButton
+        <Button
 
             android:layout_width="60dp"
             android:layout_height="40dp"
-            android:text="电门设置"
+            android:text="开启"
 
             android:id="@+id/electricity_toggle_btn2"
             android:background="#39daf7"
             android:layout_marginLeft="70dp"
             android:layout_gravity="center_horizontal"
-            android:layout_toRightOf="@+id/door_set"/>
+            android:layout_toRightOf="@+id/door_set"
+            android:layout_toStartOf="@+id/electricity_toggle_btn22"/>
+        <Button
+
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:text="关闭"
+
+            android:id="@+id/electricity_toggle_btn22"
+            android:background="#39daf7"
+
+
+            android:layout_alignParentEnd="true"/>
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
@@ -113,16 +142,27 @@
             android:text="设防设置"
             android:textColor="#f0f0f0"
             android:textSize="20sp" />
-        <ToggleButton
+        <Button
 
             android:layout_width="60dp"
             android:layout_height="40dp"
-            android:text="设防设置"
+            android:text="开启"
             android:id="@+id/set_lock_toggle_btn3"
             android:background="#39daf7"
             android:layout_marginLeft="70dp"
             android:layout_gravity="center_horizontal"
-            android:layout_toRightOf="@+id/Lock_set"/>
+            android:layout_toRightOf="@+id/Lock_set"
+            android:layout_toStartOf="@+id/set_lock_toggle_btn32"/>
+        <Button
+
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:text="关闭"
+            android:id="@+id/set_lock_toggle_btn32"
+            android:background="#39daf7"
+
+            android:layout_gravity="center_horizontal"
+            android:layout_alignParentEnd="true"/>
 
     </RelativeLayout>
     <RelativeLayout
@@ -148,84 +188,95 @@
             android:text="支撑架设置"
             android:textColor="#f0f0f0"
             android:textSize="20sp" />
-        <ToggleButton
+        <Button
 
             android:layout_width="60dp"
             android:layout_height="40dp"
-            android:text="支撑架设置"
+            android:text="开启"
             android:id="@+id/hold_toggle_btn4"
             android:background="#39daf7"
             android:layout_marginLeft="50dp"
             android:layout_gravity="center_horizontal"
-            android:layout_toRightOf="@+id/Hold_set"/>
+            android:layout_toRightOf="@+id/Hold_set"
+            android:layout_toStartOf="@+id/hold_toggle_btn42"/>
+        <Button
+
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:text="关闭"
+            android:id="@+id/hold_toggle_btn42"
+            android:background="#39daf7"
+
+
+            android:layout_alignParentEnd="true"/>
     </RelativeLayout>
     <!--<RelativeLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content" >-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content" >-->
 
-        <!--<ImageView-->
-            <!--android:id="@+id/failure_up"-->
-            <!--android:layout_width="40dp"-->
-            <!--android:layout_height="40dp"-->
-            <!--android:layout_centerVertical="true"-->
-            <!--android:layout_marginLeft="20dp"-->
-            <!--android:layout_marginTop="20dp"-->
-            <!--android:src="@drawable/hold" />-->
+    <!--<ImageView-->
+    <!--android:id="@+id/failure_up"-->
+    <!--android:layout_width="40dp"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginLeft="20dp"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:src="@drawable/hold" />-->
 
-        <!--<TextView-->
-            <!--android:id="@+id/failure_up_set"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_centerVertical="true"-->
-            <!--android:layout_marginLeft="20dp"-->
-            <!--android:layout_toRightOf="@id/failure_up"-->
-            <!--android:text="故障上报阀"-->
-            <!--android:textColor="#f0f0f0"-->
-            <!--android:textSize="20sp" />-->
-        <!--<ToggleButton-->
+    <!--<TextView-->
+    <!--android:id="@+id/failure_up_set"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginLeft="20dp"-->
+    <!--android:layout_toRightOf="@id/failure_up"-->
+    <!--android:text="故障上报阀"-->
+    <!--android:textColor="#f0f0f0"-->
+    <!--android:textSize="20sp" />-->
+    <!--<TextView-->
 
-            <!--android:layout_width="60dp"-->
-            <!--android:layout_height="40dp"-->
-            <!--android:text="故障上报阀"-->
-            <!--android:id="@+id/toggle_btn5"-->
-            <!--android:background="#39daf7"-->
-            <!--android:layout_marginLeft="50dp"-->
-            <!--android:layout_gravity="center_horizontal"-->
-            <!--android:layout_toRightOf="@+id/failure_up_set"/>-->
+    <!--android:layout_width="60dp"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:text="故障上报阀"-->
+    <!--android:id="@+id/toggle_btn5"-->
+    <!--android:background="#39daf7"-->
+    <!--android:layout_marginLeft="50dp"-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--android:layout_toRightOf="@+id/failure_up_set"/>-->
     <!--</RelativeLayout>-->
     <!--<RelativeLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content" >-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content" >-->
 
-        <!--<ImageView-->
-            <!--android:id="@+id/location_up"-->
-            <!--android:layout_width="40dp"-->
-            <!--android:layout_height="40dp"-->
-            <!--android:layout_centerVertical="true"-->
-            <!--android:layout_marginLeft="20dp"-->
-            <!--android:layout_marginTop="20dp"-->
-            <!--android:src="@drawable/hold" />-->
+    <!--<ImageView-->
+    <!--android:id="@+id/location_up"-->
+    <!--android:layout_width="40dp"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginLeft="20dp"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:src="@drawable/hold" />-->
 
-        <!--<TextView-->
-            <!--android:id="@+id/location_up_set"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_centerVertical="true"-->
-            <!--android:layout_marginLeft="20dp"-->
-            <!--android:layout_toRightOf="@id/location_up"-->
-            <!--android:text="定位上报阀"-->
-            <!--android:textColor="#f0f0f0"-->
-            <!--android:textSize="20sp" />-->
-        <!--<ToggleButton-->
+    <!--<TextView-->
+    <!--android:id="@+id/location_up_set"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginLeft="20dp"-->
+    <!--android:layout_toRightOf="@id/location_up"-->
+    <!--android:text="定位上报阀"-->
+    <!--android:textColor="#f0f0f0"-->
+    <!--android:textSize="20sp" />-->
+    <!--<TextView-->
 
-            <!--android:layout_width="60dp"-->
-            <!--android:layout_height="40dp"-->
-            <!--android:text="故障上报阀"-->
-            <!--android:id="@+id/toggle_btn6"-->
-            <!--android:background="#39daf7"-->
-            <!--android:layout_marginLeft="50dp"-->
-            <!--android:layout_gravity="center_horizontal"-->
-            <!--android:layout_toRightOf="@+id/location_up_set"/>-->
+    <!--android:layout_width="60dp"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:text="故障上报阀"-->
+    <!--android:id="@+id/toggle_btn6"-->
+    <!--android:background="#39daf7"-->
+    <!--android:layout_marginLeft="50dp"-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--android:layout_toRightOf="@+id/location_up_set"/>-->
     <!--</RelativeLayout>-->
     <RelativeLayout
 

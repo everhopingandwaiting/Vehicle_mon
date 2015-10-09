@@ -41,7 +41,7 @@ public class Request_all_info implements Serializable {
 
     }
 
-    public static void requestOrderCallback(final Context context, final JsonObject object) {
+    public  synchronized static void requestOrderCallback(final Context context, final JsonObject object) {
                  net_util.goFor(net_util.order_info, new ONHttpCallBack() {
                      @Override
                      public void onHttpCallBack(JsonObject jsonObject) {
