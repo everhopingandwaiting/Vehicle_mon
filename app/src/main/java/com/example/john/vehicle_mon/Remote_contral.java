@@ -139,20 +139,20 @@ public class Remote_contral extends Activity implements Serializable{
 
 
   char[] ch = str.toCharArray();
-        if ("1".equals(ch[5])) {
+        if ('1'==(ch[5])) {
             lookcar_toggle_btn1.setChecked(true);
 
         } else {
             lookcar_toggle_btn1.setChecked(false);
 
         }
-        if ("1".equals(ch[6])) {
+        if ('1'==(ch[6])) {
             electricity_toggle_btn2.setChecked(true);
         } else {
             electricity_toggle_btn2.setChecked(false);
 
         }
-        if ("0".equals(ch[7])) {
+        if ('0'==(ch[7])) {
             set_lock_toggle_btn3.setChecked(true);
 
         } else {

@@ -46,10 +46,8 @@ public class Aging_test implements Serializable
     }
 
     public static void logout(Context context) {
-        SharedPreferences preferences = context.getSharedPreferences(userSharePref, Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = preferences.edit();
-        editor.clear();
-        editor.apply();
+        context.getSharedPreferences(userSharePref, Context.MODE_PRIVATE).edit().clear().apply();
+        context.getSharedPreferences("RealData", Context.MODE_PRIVATE).edit().clear().apply();
         agingTest = null;
     }
 

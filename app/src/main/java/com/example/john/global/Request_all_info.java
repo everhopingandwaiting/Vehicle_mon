@@ -14,7 +14,7 @@ import util.net_util;
  * Created by john on 15-10-3.
  */
 public class Request_all_info implements Serializable {
-  public   static void requestForRealData( final Context context) {
+  public  synchronized   static void requestForRealData( final Context context) {
         JsonObject object = new JsonObject();
         object.addProperty("action", "rtdata");
 
