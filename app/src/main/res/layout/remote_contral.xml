@@ -49,7 +49,7 @@
 
             android:layout_width="60dp"
             android:layout_height="40dp"
-            android:text="开启"
+            android:text="不开启"
 
 
             android:layout_marginLeft="70dp"
@@ -57,14 +57,14 @@
             android:id="@+id/lookcar_toggle_btn1"
             android:background="#39daf7"
 
-
+                android:layout_toRightOf="@+id/Look_set"
             android:layout_alignParentTop="true"
             android:layout_toStartOf="@+id/lookcar_toggle_btn12" />
         <Button
 
             android:layout_width="60dp"
             android:layout_height="40dp"
-            android:text="关闭"
+            android:text="开一次"
             android:id="@+id/lookcar_toggle_btn12"
             android:background="#39daf7"
 
@@ -96,12 +96,12 @@
             android:textColor="#f0f0f0"
             android:textSize="20sp" />
         <Button
-
+            android:id="@+id/electricity_toggle_btn2"
             android:layout_width="60dp"
             android:layout_height="40dp"
-            android:text="开启"
+            android:text="断开"
 
-            android:id="@+id/electricity_toggle_btn2"
+
             android:background="#39daf7"
             android:layout_marginLeft="70dp"
             android:layout_gravity="center_horizontal"
@@ -111,7 +111,7 @@
 
             android:layout_width="60dp"
             android:layout_height="40dp"
-            android:text="关闭"
+            android:text="接通"
 
             android:id="@+id/electricity_toggle_btn22"
             android:background="#39daf7"
@@ -146,7 +146,7 @@
 
             android:layout_width="60dp"
             android:layout_height="40dp"
-            android:text="开启"
+            android:text="设防"
             android:id="@+id/set_lock_toggle_btn3"
             android:background="#39daf7"
             android:layout_marginLeft="70dp"
@@ -157,7 +157,7 @@
 
             android:layout_width="60dp"
             android:layout_height="40dp"
-            android:text="关闭"
+            android:text="解防"
             android:id="@+id/set_lock_toggle_btn32"
             android:background="#39daf7"
 
@@ -319,6 +319,19 @@
             android:layout_height="wrap_content"
             android:text="0.0V"
             android:textColor="@android:color/holo_red_light"
+            />
+
+        <TextView
+            android:layout_below="@+id/Electricity_info_rc"
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="开关状态'红色'标识为当前状态，无法点击！\n'绿色'标识代表可设置状态，可点击!"
+            android:background="@android:color/holo_red_light"
+            android:textSize="16dp"
+            android:autoText="true"
+            android:gravity="center_horizontal"
+
             />
     </RelativeLayout>
 </LinearLayout>

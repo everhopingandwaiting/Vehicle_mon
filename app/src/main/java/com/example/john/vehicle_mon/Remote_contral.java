@@ -141,13 +141,13 @@ public class Remote_contral extends Activity implements Serializable{
             electricity_toggle_btn22.setTextColor(Color.GREEN);
 
         }
-        if ('0'==(ch[7])) {
+        if ('1'==(ch[7])) {
             set_lock_toggle_btn3.setEnabled(true);
             set_lock_toggle_btn3.setTextColor(Color.GREEN);
             set_lock_toggle_btn32.setEnabled(false);
             set_lock_toggle_btn32.setTextColor(Color.RED);
 
-        } else if ('1'==ch[7]){
+        } else if ('0'==ch[7]){
             set_lock_toggle_btn3.setEnabled(false);
             set_lock_toggle_btn3.setTextColor(Color.RED);
             set_lock_toggle_btn32.setEnabled(true);
