@@ -107,9 +107,10 @@ public class Remote_contral extends Activity implements Serializable{
 
 
     void initTbnStatus() {
-        Request_all_info.requestForRealData(this);
+        Request_all_info.requestForRealData(context);
         SharedPreferences preferences = context.getSharedPreferences("RealData", MODE_PRIVATE);
          String str = preferences.getString("MonitoringInfo", "errorhhh");
+        System.out.println(str+"!@#$%((*&^^$@#%R&T^$&^%^*$^$#^*%&^&*(&(*)*&(*^&*$%^");
       Electricity_info_value_rc.setText(preferences.getString("Electricity",null)+"V  ");
         StandbyElectricity_info_value_rc.setText(preferences.getString("StandbyElectricity",null)+"V");
 
@@ -192,7 +193,7 @@ public class Remote_contral extends Activity implements Serializable{
         hold_toggle_btn42                    =(Button)findViewById(R.id.hold_toggle_btn42)                   ;
     }
     private  class  setOrder{
-        private void setLOOKCAR(boolean b) {
+        private synchronized void setLOOKCAR(boolean b) {
             JsonObject object;
             if (b) {
                 object = orderList().get("XCBKQ");
@@ -203,7 +204,7 @@ public class Remote_contral extends Activity implements Serializable{
 
 
         }
-        private void setELDoor(boolean b) {
+        private synchronized void setELDoor(boolean b) {
             JsonObject object ;
             if (b) {
                 object= orderList().get("DMDK");
@@ -214,7 +215,7 @@ public class Remote_contral extends Activity implements Serializable{
 
 
         }
-        private void setLOCK(boolean b) {
+        private synchronized void setLOCK(boolean b) {
             JsonObject object ;
             if (b) {
                 object= orderList().get("SF");
